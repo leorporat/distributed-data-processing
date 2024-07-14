@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package reddit;
+
+option go_package = "../../internal/reddit";
+
+service RedditService {
+  rpc GetPostComments(PostRequest) returns (CommentsResponse) {}
+}
+
+message PostRequest {
+  string subreddit = 1;
+  string search_query = 2;
+  int32 limit = 3;
+}
+
+message CommentsResponse {
+  string post_title = 1;
+  repeated Comment comments = 2;
+}
+
+message Comment {
+  string body = 1;
+}
