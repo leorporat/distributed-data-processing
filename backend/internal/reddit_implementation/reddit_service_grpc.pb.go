@@ -4,7 +4,7 @@
 // - protoc             v5.27.1
 // source: reddit_service.proto
 
-package reddit
+package reddit_implementation
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion8
 
 const (
-	RedditService_GetPostComments_FullMethodName = "/reddit.RedditService/GetPostComments"
+	RedditService_GetPostComments_FullMethodName = "/reddit_implementation.RedditService/GetPostComments"
 )
 
 // RedditServiceClient is the client API for RedditService service.
@@ -97,7 +97,7 @@ func _RedditService_GetPostComments_Handler(srv interface{}, ctx context.Context
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var RedditService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "reddit.RedditService",
+	ServiceName: "reddit_implementation.RedditService",
 	HandlerType: (*RedditServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

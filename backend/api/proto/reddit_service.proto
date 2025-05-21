@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package reddit;
+package reddit_implementation;
 
-option go_package = "../../internal/reddit";
+option go_package = "../../internal/reddit_implementation";
 
 service RedditService {
   rpc GetPostComments(PostRequest) returns (CommentsResponse) {}
